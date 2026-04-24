@@ -1,0 +1,36 @@
+# ============================================================
+# Claude Code fork-skill — tmux keybindings snippet
+# ============================================================
+# Add these lines to your ~/.tmux.conf, then reload with:
+#   <prefix> r   (if you have a reload binding)
+# or:
+#   tmux source-file ~/.tmux.conf
+#
+# These bindings assume your prefix is Ctrl+a (the most common
+# alternative). If your prefix is the default Ctrl+b, the
+# bindings still work — just substitute Ctrl+b where you see
+# Ctrl+a in the comments below.
+# ============================================================
+
+# Ctrl+a f  →  /fork     (vertical split, side by side — default)
+# Ctrl+a F  →  /fork h   (horizontal split, top / bottom)
+# Ctrl+a M  →  /merge-fork
+bind-key f send-keys '/fork' Enter
+bind-key F send-keys '/fork h' Enter
+bind-key M send-keys '/merge-fork' Enter
+
+# ============================================================
+# Alternative: chord-style bindings (two keys after prefix)
+#
+# If you prefer a submenu — press <prefix> c, then one of:
+#   v  →  vertical fork
+#   h  →  horizontal fork
+#   m  →  merge-fork
+#   Escape / c  →  cancel
+# ============================================================
+# bind-key c switch-client -T claude-fork
+# bind-key -T claude-fork v send-keys '/fork v' Enter
+# bind-key -T claude-fork h send-keys '/fork h' Enter
+# bind-key -T claude-fork m send-keys '/merge-fork' Enter
+# bind-key -T claude-fork Escape switch-client -T root
+# bind-key -T claude-fork c switch-client -T root

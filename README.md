@@ -75,12 +75,12 @@ Merge the contents of `examples/settings-snippet.json` into `~/.claude/settings.
     "allow": [
       "Bash(git worktree add*)",
       "Bash(git worktree remove*)",
-      "Bash(mkdir -p ~/.claude/forks/*)",
+      "Bash(mkdir -p */.claude/forks/*)",
       "Bash(mkdir -p */.claude/worktrees*)",
       "Bash(tmux split-window*)",
       "Bash(printf '\\n# Claude Code fork worktrees\\n.claude/worktrees/\\n' >> *)",
-      "Write(*FORK_HANDOFF.md)",
-      "Write(*FORK_NOTES.md)"
+      "Write(**/FORK_HANDOFF.md)",
+      "Write(**/FORK_NOTES.md)"
     ]
   }
 }
